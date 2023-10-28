@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+        stage("Checkout") {
+            steps {
+                checkout scmGit(branches: [[name: '/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Pauljuju/rock-genius-finalement.git']])
+            }
+        }
+       
+        
+        stage('Deploy Dev') {
+            steps {
+                script {
+                    dir('dev-environment') {
+                        // Deploy to the Dev environment using Terraform
+                        sh 'terraform init'
+                        echo "Terraform action is --> ${action}"
+                        sh ("terraform ${action} --auto-approve")
+                    }
+                }
+            }
+        }
+
+
+    }
+
+}

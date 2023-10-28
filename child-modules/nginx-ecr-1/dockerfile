@@ -1,0 +1,13 @@
+# use NGINX as base image #
+
+FROM nginx:latest
+
+WORKDIR /usr/share/nginx/html
+
+EXPOSE 80
+
+# copy html files to default path #
+
+COPY index.html  /usr/share/nginx/html
+
+CMD ["nginx", "-g", "daemon off;"]
