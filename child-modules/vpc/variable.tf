@@ -35,3 +35,4 @@ variable "validation_method" {}
 variable "private_zone" {}
 variable "network_mode" {}
 variable "launch_configuration_name" {}
+variable "aws_ecs_task_definition" {}

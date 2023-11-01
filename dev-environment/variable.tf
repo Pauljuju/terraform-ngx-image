@@ -109,3 +109,7 @@ variable "network_mode" {
 variable "launch_configuration_name" {
     default = "sika-launch"
 }
+
+variable "aws_ecs_task_definition" {
+    default = "sika-task-definition"
+}

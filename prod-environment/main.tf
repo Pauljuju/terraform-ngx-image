@@ -40,6 +40,7 @@ module "vpc" {
   private_zone           = var.private_zone
   network_mode           = var.network_mode
   launch_configuration_name = var.launch_configuration_name
+  aws_ecs_task_definition = var.aws_ecs_task_definition
 } 
 
 

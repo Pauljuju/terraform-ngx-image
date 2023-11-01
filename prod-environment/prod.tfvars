@@ -35,3 +35,4 @@ validation_method      = "DNS"
 private_zone           = false
 network_mode           = "awsvpc"
 launch_configuration_name = "Ama-launch"
+aws_ecs_task_definition = "sika-task-definition"
