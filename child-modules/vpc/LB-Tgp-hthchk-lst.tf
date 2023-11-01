@@ -1,7 +1,7 @@
 # lb config #
 
 resource "aws_lb" "sika-lb" {
-  name               = "${var.project_name}-sika-lb"
+  name               = "${var.project_name}-lb"
   internal           = true
   load_balancer_type = var.load_balancer_type
   security_groups    = [aws_security_group.sika-sg.id]
