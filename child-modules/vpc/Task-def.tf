@@ -1,7 +1,7 @@
 # Task definition #
 
 resource "aws_ecs_task_definition" "task-definition" {
-  family = "sika-task-definition"
+  family = var.aws_ecs_task_definition
   network_mode             = var.network_mode
   requires_compatibilities = ["FARGATE"]
   execution_role_arn       = aws_iam_role.sika_iam_role.arn
