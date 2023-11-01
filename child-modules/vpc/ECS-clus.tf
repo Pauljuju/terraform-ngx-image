@@ -3,7 +3,7 @@
 resource "aws_ecs_service" "sika-svc" {
   name                               = "${var.project_name}-svc"
   cluster                            = aws_ecs_cluster.sika-cluster.name
-  task_definition                    = aws_ecs_task_definition.task-definition.arn
+  task_definition                    = aws_ecs_task_definition.sika-task-definition.arn
   desired_count                      = 4
   deployment_minimum_healthy_percent = 100
   deployment_maximum_percent         = 200

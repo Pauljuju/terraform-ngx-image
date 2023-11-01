@@ -1,7 +1,7 @@
 # Task definition #
 
 resource "aws_ecs_task_definition" "task-definition" {
-  family = "task-definition"
+  family = "sika-task-definition"
   network_mode             = var.network_mode
   requires_compatibilities = ["FARGATE"]
   execution_role_arn       = aws_iam_role.sika_iam_role.arn
@@ -36,7 +36,7 @@ resource "aws_ecs_task_definition" "task-definition" {
   ])
 
   volume {
-    name      = "task-definition-storage"
+    name      = "sika-task-definition-storage"
   
   }
 }

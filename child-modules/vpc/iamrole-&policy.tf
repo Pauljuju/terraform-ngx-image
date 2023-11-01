@@ -10,7 +10,7 @@ resource "aws_iam_role" "sika_iam_role" {
     {
       "Effect": "Allow",
       "Principal": {
-        "Service": ["eks-fargate-pods.amazonaws.com", "ecs-tasks.amazonaws.com"]
+        "Service": ["ecs-tasks.amazonaws.com"]
       },
       "Action": "sts:AssumeRole"
     }
@@ -43,3 +43,12 @@ resource "aws_iam_role_policy" "sika_iam_policy" {
 }
 EOF
 }
+
+
+
+
+
+
+
+
+##"eks-fargate-pods.amazonaws.com",##
