@@ -89,7 +89,7 @@ variable "password" {
     default = "pw052301"
 }
 variable "cluster_name" {
-    default = "sika-cluster-name" 
+    default = "sika-cluster" 
 }
 variable "publicly_accessible" {
     default = true
