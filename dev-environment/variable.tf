@@ -34,6 +34,9 @@ variable "nat_gateway_route_cidr" {
 variable "inbound_ports" {
     default = [443]
 }
+variable "outbound_ports" {
+  default = [0]
+}
 variable "username" {
     default = "dbsika"
 }

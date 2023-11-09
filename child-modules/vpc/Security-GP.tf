@@ -1,8 +1,8 @@
 # Security  Group #
 
 locals {
-  inbound_ports  = [443, 80]
-  outbound_ports = [0]
+  inbound_ports  = var.inbound_ports
+  outbound_ports = var.outbound_ports
 }
 
 resource "aws_security_group" "sika-sg" {
@@ -22,7 +22,7 @@ resource "aws_security_group" "sika-sg" {
   }
 
   dynamic "egress" {
-    for_each = local.outbound_ports
+    for_each = var.outbound_ports
     content {
       from_port   = egress.value
       to_port     = egress.value

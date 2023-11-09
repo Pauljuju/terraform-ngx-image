@@ -10,6 +10,7 @@ internet_gateway       = "sika_IGW"
 nat_gateway            = "sika_nat_gateway"
 nat_gateway_route_cidr = "0.0.0.0/0"
 inbound_ports          = [80]
+outbound_ports         = [0]
 username               = "dbsika"
 instance_class         = "db.t3.micro"
 instance_type          = "t2.micro"
