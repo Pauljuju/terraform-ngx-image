@@ -25,6 +25,7 @@ resource "aws_ecs_service" "sika-svc" {
 
 }
   
+  
   # aws cluster #
 
 resource "aws_ecs_cluster" "sika-cluster" {
