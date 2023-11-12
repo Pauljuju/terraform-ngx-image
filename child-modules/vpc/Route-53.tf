@@ -1,4 +1,5 @@
 #Create a hosted zone for RT 53 #
+
 data "aws_route53_zone" "selected" {
   name = var.domain_name
 
