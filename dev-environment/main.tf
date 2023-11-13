@@ -23,6 +23,7 @@ module "vpc" {
   engine_version         = var.engine_version
   allocated_storage      = var.allocated_storage
   inbound_ports          = var.inbound_ports
+  outbound_ports         = var.outbound_ports 
   domain_name            = var.domain_name
   alternative_name       = var.alternative_name
   key_name               = var.key_name
@@ -41,7 +42,6 @@ module "vpc" {
   network_mode           = var.network_mode
   launch_configuration_name = var.launch_configuration_name
   aws_ecs_task_definition = var.aws_ecs_task_definition
-  outbound_ports = var.outbound_ports
 } 
 
 

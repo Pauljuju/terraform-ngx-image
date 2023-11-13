@@ -10,6 +10,7 @@ variable "internet_gateway" {}
 variable "nat_gateway" {}
 variable "nat_gateway_route_cidr" {}
 variable "inbound_ports" {}
+variable "outbound_ports" {}
 variable "username" {}
 variable "instance_class" {}
 variable "instance_type" {}

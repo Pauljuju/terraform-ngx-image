@@ -15,6 +15,17 @@ resource "aws_db_instance" "database" {
 }
 
 
+ # Create db Subnet Group #
+
+resource "aws_db_subnet_group" "dbsubnetgroup" {
+  name       = "${var.project_name}-dbsgp"
+  subnet_ids = [aws_subnet.sika_ptesub[0].id, aws_subnet.sika_ptesub[1].id]
+
+  tags = {
+    Name = "${var.project_name}-dbsgp"
+  }
+}
+
 # postgreSQL sg #
 
 resource "aws_security_group" "postgres-sg" {
